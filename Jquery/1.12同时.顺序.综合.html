@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1.12同时.顺序.综合</title>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#box").click(function(){
+			// $(this).animate({"left":"500px"});//有默认时间
+			// $(this).animate({"left":"500px"},500);//设置时间为500
+			$(this).animate({"left":"+=200px"},200);//再次点击继续移动
+		});
+	});
+	</script>
+	<style type="text/css">
+	div{
+		width: 200px;
+		height: 200px;
+		position: absolute;
+		background: red;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+
+	</div>
+</body>
+</html>

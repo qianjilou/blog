@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		var node = null;
+		$("#btn").click(function(){
+			node = $("ul").remove();
+		});
+		$("#btn2").click(function(){
+			$("body").append( node );
+		});
+		$("#btn3").click(function(){
+			$("ul").empty();
+		});
+	});
+	</script>
+</head>
+<body>
+	<input type="button" value="删除节点" id="btn">	
+	<input type="button" value="恢复节点" id="btn2">	
+	<input type="button" value="清空节点后代" id="btn3">	
+	<ul>
+		<li>节点</li>
+		<li>节点</li>
+		<li>节点</li>
+		<li>节点</li>
+	</ul>	
+</body>
+</html>

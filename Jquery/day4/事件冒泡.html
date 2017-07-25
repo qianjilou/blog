@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$("div:eq(2)").click(function( ev ){
+			alert( "蓝色被点击了" );
+			ev.stopPropagation();
+			// return false;
+		});
+		$("div:eq(1)").click(function(){
+			alert( "绿色被点击了" );	
+			return false;
+		});
+		$("div:eq(0)").click(function(){
+			alert( "红色被点击了" );	
+		});
+	});
+	</script>
+	<style>
+	div {
+		padding: 100px;
+	}
+	</style>
+</head>
+<body>
+	<div style="background:red">
+		<div style="background:green;">
+			<div style="background:blue;"></div>
+		</div>
+	</div>	
+</body>
+</html>

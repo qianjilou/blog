@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		// $("#userForm :enabled").css( "border", "1px solid red" );
+		// $("#userForm :disabled").css( "border", "1px solid red" );
+		// $("#userForm :checked").each( function() {
+		// 	alert( $(this).val() );
+		// } );
+
+		$("#userForm :selected").each(function(){
+			alert( $(this).val() );
+		});
+	});
+	</script>
+</head>
+<body>
+	<form action="" id="userForm">
+		<p>
+			用户名: <input type="text" name="userName" id="userName">
+		</p>
+		<p>
+			邮箱: <input type="text" name="userEmail" id="userEmail" disabled>
+		</p>
+		<p>
+			密码: <input type="password" name="userPwd" id="userPwd" disabled>
+		</p>
+		<p>
+			爱好: <br>
+			<input type="checkbox" name="hobby" id="" value="篮球">篮球
+			<input type="checkbox" name="hobby" id="" value="足球" checked>足球
+			<input type="checkbox" name="hobby" id="" value="排球" >排球
+			<input type="checkbox" name="hobby" id="" value="羽毛球" checked>羽毛球
+		</p>
+		<p>
+			来自哪里: <br>
+			<select name="province" id="province">
+				<option value="江西省">江西省</option>
+				<option value="广东省" selected>广东省</option>
+				<option value="广西省">广西省</option>
+			</select>
+		</p>
+
+		<p>
+			来自哪里: <br>
+			<select name="province" id="province">
+				<option value="江西省">江西省</option>
+				<option value="广东省" selected>广东省</option>
+				<option value="广西省">广西省</option>
+			</select>
+		</p>
+	</form>	
+</body>
+</html>

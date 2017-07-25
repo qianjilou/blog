@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
+	<title>高亮</title>
+	<script type="text/javascript">
+	$(function(){
+		// $("div").mouseover(function(){
+		// 	$(this).addClass("red").siblings("div").removeClass("red");
+		// })
+		// $("div").mouseout(function(){
+		// 	$(this).removeClass("red");
+		// })
+		
+		// $("div").mouseover(function(){
+		// 	$(this).addClass("red").siblings("div").removeClass("red");
+		// }).mouseout(function(){
+		// 	$(this).removeClass("red");
+		// })
+		
+		$("div").hover(function(){
+			$(this).addClass("red").siblings("div").removeClass("red");
+		},function(){
+			$(this).removeClass("red");
+		});
+	})
+	</script>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			border: 1px solid blue;
+			background: #ccc;
+			float: left;
+			margin: 10px;
+			padding: 10px;
+
+
+		}
+		.red{
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

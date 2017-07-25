@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		// $("div").mouseover(function(){
+		// 	$(this).css( "border", "5px solid red" ).siblings().css("border", "5px solid #ccc");
+		// }).mouseout(function(){
+		// 	$(this).css( "border", "5px solid #ccc" );	
+		// });
+
+		$("div").hover(function(){
+			$(this).css( "border", "5px solid red" ).siblings().css("border", "5px solid #ccc");
+		}, function(){
+			$(this).css( "border", "5px solid #ccc" );	
+		});
+
+
+	});
+	</script>
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		float: left;
+		margin: 20px;
+		border: 5px solid #ccc;
+		padding:10px;
+	}
+	</style>
+</head>
+<body>
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+	<div></div>	
+</body>
+</html>

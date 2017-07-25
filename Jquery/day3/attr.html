@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$("#btn").click(function(){
+			// $("div").attr( "alt", "div标签" );
+			// $("div").attr( { "class" : "desc", "title" : "div" } );
+			$("div").attr( "class", "desc" );
+			$("div").attr( "class", "desc2" );
+		});
+		$("#btn2").click(function(){
+			$("div").removeAttr( "title" ).removeAttr( "class" );
+		});
+	});
+	</script>
+	<style>
+	.desc {
+		width: 200px;
+		height: 200px;
+		background: red;
+	}
+	</style>
+</head>
+<body>
+	<input type="button" value="添加属性" id="btn">	
+	<input type="button" value="移除属性" id="btn2">	
+	<div id="box" class="desc" title="这是一个div标签"></div>
+</body>
+</html>

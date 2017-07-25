@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		// $("#btn").click(function(){
+		// });
+
+		// var oBtn = document.getElementById( "btn" );
+		// var oBox = document.getElementById( "box" );
+		// oBtn.onclick = function () {
+		// 	if ( oBox.style.display == 'block' ) {
+		// 		oBox.style.display = "none";
+		// 	}else {
+		// 		oBox.style.display = "block";
+		// 	}
+		// }
+
+		// $("#btn").click(function(){
+		// 	if ( $("#box").is( ":visible" ) ) {
+		// 		$("#box").hide();
+		// 	}else {
+		// 		$("#box").show();
+		// 	}
+		// });
+
+
+		$("#btn").click(function(){
+			// if ( $("#box").get(0).style.display == 'block' ) {
+			if ( $("#box")[0].style.display == 'block' ) {
+				$("#box").hide();
+			}else {
+				$("#box").show();
+			}
+
+		});
+
+		// var oBtn = document.getElementById( "btn" );
+		// var oBox = document.getElementById( "box" );
+		// oBtn.onclick = function () {
+		// 	if ( $(oBox).is(":visible") ) {
+		// 		oBox.style.display = "none";
+		// 	}else {
+		// 		oBox.style.display = "block";
+		// 	}
+		// }
+
+
+
+	});
+	</script>
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		background: red;
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<input type="button" value="显示&隐藏div" id="btn">	
+	<div id="box"></div>
+</body>
+</html>

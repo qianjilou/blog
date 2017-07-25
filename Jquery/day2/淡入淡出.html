@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.min.js"></script>
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		background: red;
+		opacity:0.3;
+		filter:alpha(opacity:30);
+	}
+	</style>
+	<script>
+	$(function(){
+		$("#box").hover( function(){
+			$(this).stop();
+			$(this).animate( { "opacity" : 1 }, 1000 );
+		}, function(){
+			$(this).stop();
+			$(this).animate( { "opacity" : 0.3 }, 1000 );
+		} );
+	});
+	</script>
+</head>
+<body>
+	<div id="box"></div>		
+</body>
+</html>

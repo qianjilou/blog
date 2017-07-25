@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		// $("#box p").css( "border", "1px solid red" );
+		// $("#box > p").css( "border", "1px solid red" );
+		// $("#box div:eq(0) + div").css( "border", "1px solid red" );
+		// $("#box div:eq(0) + p").css( "border", "1px solid red" );
+		// $("#box div:eq(0)").next().css( "border", "1px solid red" );
+
+		// $("#box div:eq(1) ~ div").css( "border", "1px solid red" );
+		// $("#box div:eq(1)").nextAll().css( "border", "1px solid red" );
+		// $("#box div:eq(1)").nextAll("div").css( "border", "1px solid red" );
+		// $("#box div:eq(1)").nextAll("p").css( "border", "1px solid red" );
+		// $("#box div:eq(1)").siblings().css( "border", "1px solid red" );
+		// $("#box div:eq(1)").siblings("div").css( "border", "1px solid red" );
+		$("#box div:eq(1)").siblings("p").css( "border", "1px solid red" );
+
+
+
+	});
+	</script>
+	<style>
+	#box p, #box div{
+		padding: 10px;
+		border: 1px solid #000;
+		margin: 5px;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div class="son"><p>这是一个段落</p></div>
+		<!-- <p>这是一个段落</p> -->
+		<div class="son"><p>这是一个段落</p></div>
+		<div class="son"><p>这是一个段落</p></div>
+		<div class="son"><p>这是一个段落</p></div>
+		<div class="son"><p>这是一个段落</p></div>
+		<p>这是一个段落</p>
+		<p>这是一个段落</p>
+		<p>这是一个段落</p>
+		<p>这是一个段落</p>
+	</div>	
+</body>
+</html>

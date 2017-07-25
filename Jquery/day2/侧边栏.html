@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$("#box").hover(function(){
+			$(this).stop();
+			$(this).animate( { "left" : "0px" }, 500 );
+		}, function(){
+			$(this).stop();
+			$(this).animate( { "left" : "-200px" }, 500 );
+		});
+	});
+	</script>
+	<style>
+	div {
+		width: 200px;
+		height: 300px;
+		background: red;
+		position: absolute;
+		left: -200px;
+		top: 200px;
+	}
+	div span {
+		width: 28px;
+		position: absolute;
+		right: -28px;
+		height: 100px;
+		top: 100px;
+		background: green;
+	}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<span>分享到</span>
+	</div>	
+</body>
+</html>

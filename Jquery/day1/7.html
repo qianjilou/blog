@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$("input:eq(0)").click(function(){
+			$("#box input").attr( "checked", true );
+		});
+		$("input:eq(1)").click(function(){
+			$("#box input").attr( "checked", false );
+		});
+		$("input:eq(2)").click(function(){
+			$("#box input").each(function( i ){
+				if ( $(this).is(":checked") ) {
+					$(this).attr( "checked", false );
+				}else {
+					$(this).attr( "checked", true );
+				}
+			});
+		});
+	});
+	</script>
+</head>
+<body>
+	<input type="button" value="全选">	
+	<input type="button" value="不选">	
+	<input type="button" value="反选">	
+	<div id="box">
+		<input type="checkbox" name="" id=""><br/>
+		<input type="checkbox" name="" id=""><br/>
+		<input type="checkbox" name="" id=""><br/>
+		<input type="checkbox" name="" id=""><br/>
+		<input type="checkbox" name="" id=""><br/>
+		<input type="checkbox" name="" id=""><br/>
+		<input type="checkbox" name="" id=""><br/>
+		<input type="checkbox" name="" id=""><br/>
+		<input type="checkbox" name="" id=""><br/>
+	</div>
+</body>
+</html>

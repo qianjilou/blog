@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$(document).mousedown(function(ev){
+			switch( ev.which ) {
+				case 1:
+					alert( "左键" );
+					break;
+				case 2:
+					alert( "中键" );
+					break;
+				case 3:
+					alert( "右键" );
+					break;
+			}
+		});
+		$(document).keydown(function( ev ){
+			alert(ev.keyCode);
+		});
+	});
+	</script>
+</head>
+<body>
+		
+</body>
+</html>

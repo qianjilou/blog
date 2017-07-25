@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$("#btn").click(function(){
+			// $("#box").addClass( "active" );
+			// $("#box").addClass( "bd" );
+			// $("#box").css( "background", "green" );
+			// $("#box").css( "background", "green" );
+			// $("#box").css( "border", "10px solid #ff8800" );
+
+			// $("#box").css( "background", "green" ).css( "border", "10px solid #ff8800" );
+
+			$("#box").css( "background", "green" );
+		});
+		$("#btn2").click(function(){
+			// $("#box").removeClass( "active" );
+			// $("#box").css( "background", "red" );
+		});
+	});
+	</script>
+	<style>
+	div {
+		width: 200px;
+		height: 200px;
+		background: red;
+	}
+	.active {
+		background: green;
+	}	
+	.bd {
+		border: 10px solid #ff8800;
+	}
+	</style>
+</head>
+<body>
+	<input type="button" value="按钮1" id="btn">	
+	<input type="button" value="按钮2" id="btn2">
+	<div id="box"></div>
+</body>
+</html>

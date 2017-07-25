@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>addclass</title>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$("#btn1").click(function(){
+			// $("div").css("background","red");
+			// $("#box p:eq(2)").css("background","pink");
+			// $("#box p:first").css("background","pink");
+			// $("#box p:last").css("background","pink");
+			// $("#box p:lt(3)").css("background","pink");//小于4的
+			// $("#box p:lt(3)").css("background","red");//大于4的
+			$("#box").find("p").css("background","red");//大于4的
+		})
+		$("#btn2").click(function(){
+			// $("#box > p").css("background","green");
+			$("#box").children("p").css("background","silver");
+		})
+		$("#btn3").click(function(){
+			$("div").css("background","blue");
+		})
+	})
+		
+	</script>
+	<style type="text/css">
+	.son{
+/*		float: left;*/
+		margin: 5px;
+		background:pink;
+	}
+	p{
+		border:1px solid blue;
+		margin:5px;
+		background: #f0f;
+	}
+	</style>
+</head>
+<body>
+	<input type="button" value="变红" id="btn1">
+	<input type="button" value="变绿" id="btn2">
+	<input type="button" value="变蓝" id="btn3">
+	<br>
+	<div id="box">
+		<div class="son"><p>这是一个段落</p></div>
+		<div class="son"><p>这是一个段落</p></div>
+		<div class="son"><p>这是一个段落</p></div>
+		<div class="son"><p>这是一个段落</p></div>
+		<br>
+		<p>这是一个段落</p>
+		<p>这是一个段落</p>
+		<p>这是一个段落</p>
+		<p>这是一个段落</p>
+	</div>
+</body>
+</html>

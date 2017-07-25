@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>千机楼博客</title>
+	<link rel="stylesheet" href="./css/global.css">
+	<link rel="stylesheet" href="./css/shujia.css">
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/global.js"></script>
+	<script type="text/javascript">
+		$(window).scroll(function(){
+			  if($(document).scrollTop()>=70){  //滚动条距离顶部高度小于70的时候
+			    $(".LoutiNav").addClass("fixedshujia");
+			  }else{
+			   $(".LoutiNav").removeClass("fixedshujia");
+			  }
+		});
+
+		var oNav = $('.LoutiNav');//导航壳
+		   var aNav = oNav.find('li');//导航
+		   var aDiv = $('.shujia .louceng');//楼层
+		   var oTop = $('#goTop');
+			//回到顶部
+			$(window).scroll(function(){
+				 var winH = $(window).height();//可视窗口高度
+				 var iTop = $(window).scrollTop();//鼠标滚动的距离
+				 
+				 if(iTop>=150){
+				 	oNav.fadeIn();
+				 	oTop.fadeIn();
+				 //鼠标滑动式改变	
+				 aDiv.each(function(){
+				 	if(winH+iTop - $(this).offset().top>winH/2){
+				 		aNav.removeClass('active');
+				 		aNav.eq($(this).index()).addClass('active');
+				 	}
+				 })
+				 }else{
+				 	// oNav.fadeOut();
+				 	oTop.fadeOut();
+				 }
+			})
+			//点击top回到顶部
+			oTop.click(function(){
+				$('body,html').animate({"scrollTop":0},500)
+			})
+			//点击回到当前楼层
+			aNav.click(function(){
+				var t = aDiv.eq($(this).index()).offset().top;
+				$('body,html').animate({"scrollTop":t},500);
+				$(this).addClass('active').siblings().removeClass('active');
+			});
+		
+
+	</script>
+</head>
+<body>
+<header>
+	<div class="logo">
+	</div>
+	<nav>
+		<div class="menu">
+			<ul>
+				<li><a href="./index1.html">首页</a></li>
+				<li><a href="./suibi.html">随笔</a></li>
+				<li><a href="./xiangce.html">相册</a></li>
+				<li><a href="./shujia.html">书架</a></li>
+				<!-- <li><a href="">购物商城</a></li> -->
+				<li><a href="./anli.html">网站案例</a></li>
+				<!-- <li><a href="">小型B/S系统</a></li> -->
+				<li><a href="">留言</a></li>
+				<li><a href="">时光轴</a></li>
+			</ul>
+			<div id="nav_search">
+				<input type="text" name="keyword" id="keyword" value="请输入搜索内容">
+				<input type="button" value="搜索" class="search">
+			</div>
+		</div>
+	</nav>
+</header>
+
+
+<div class="shujia_content">
+	<div class="breadcrumb">
+		<a href="">首页</a>》网站案例
+	</div>
+	<ul class="LoutiNav">
+		<li class="active">全部书籍</li>
+		<li>HTML5 + CSS3</li>
+		<li>js + jQuery </li>
+		<li>php</li>
+		<li>Liunx</li>
+		<li>Liunx</li>
+	</ul>
+	<div class="shujia">
+		<div class="louceng">	
+			<p class="f1">html5 + css3</p>
+			<ul>
+				<li>
+					<img src="./img/shuji/10html5.jpg" alt="">
+					<h3>￥88.00</h3>
+					<p><a href="./anli/zhongai">图灵程序设计丛书 HTML5指南</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/11chanyi.jpg" alt="">
+					<h3>￥35.40</h3>
+					<p><a href="./anli/zhongai">CSS禅意花园(修订版)</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/12cssquanwei.jpg" alt="">
+					<h3>￥47.10</h3>
+					<p><a href="./anli/zhongai">CSS权威指南（第3版）</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/13jingtongcss.jpg" alt="">
+					<h3>￥55.10</h3>
+					<p><a href="./anli/zhongai">HTML5+CSS3从入门到精通</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/13jingtongcss.jpg" alt="">
+					<h3>￥55.10</h3>
+					<p><a href="./anli/zhongai">HTML5+CSS3从入门到精通</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/13jingtongcss.jpg" alt="">
+					<h3>￥55.10</h3>
+					<p><a href="./anli/zhongai">HTML5+CSS3从入门到精通</a></p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="louceng">	
+			<p class="f1">javascript</p>
+			<ul>
+				<li>
+					<img src="./img/shuji/1dom.jpg" alt="">
+					<h3>￥38.70</h3>
+					<p><a href="./anli/zhongai">javascript DOM编程技术(第2版)</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/2jquery.jpg" alt="">
+					<h3>￥42.80</h3>
+					<p><a href="./anli/zhongai">锋利的jQuery(第2版)</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/3gaocheng3.jpg" alt="">
+					<h3>￥78.20</h3>
+					<p><a href="./anli/zhongai">JavaScript高级程序设计(第3版)</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/4nojs.jpg" alt="">
+					<h3>￥38.70</h3>
+					<p><a href="./anli/zhongai">你所不知道的JavaScript(上卷)</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/4nojs.jpg" alt="">
+					<h3>￥38.70</h3>
+					<p><a href="./anli/zhongai">你所不知道的JavaScript(上卷)</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/4nojs.jpg" alt="">
+					<h3>￥38.70</h3>
+					<p><a href="./anli/zhongai">你所不知道的JavaScript(上卷)</a></p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="louceng">	
+			<p class="f1">php+MySql</p>
+			<ul>
+
+				<li>
+					<img src="./img/shuji/6xishuophp.jpg" alt="">
+					<h3>￥70.90</h3>
+					<p><a href="./anli/zhongai">细说PHP(第2版)</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/7phpweb.jpg" alt="">
+					<h3>￥61.80</h3>
+					<p><a href="./anli/zhongai">PHP和MySQL Web开发(第4版)</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/33php.jpg" alt="">
+					<h3>￥54.50</h3>
+					<p><a href="./anli/zhongai">深入PHP：面向对象、模式与实践</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/34php.jpg" alt="">
+					<h3>￥54.50</h3>
+					<p><a href="./anli/zhongai">重构 改善既有代码的设计</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/34php.jpg" alt="">
+					<h3>￥54.50</h3>
+					<p><a href="./anli/zhongai">重构 改善既有代码的设计</a></p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="louceng">	
+			<p class="f1">Linux</p>
+			<ul>
+				<li>
+					<img src="./img/shuji/40mysql.jpg" alt="">
+					<h3>￥101.10</h3>
+					<p><a href="./anli/zhongai">高性能MySQL(第3版)</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/40mysql.jpg" alt="">
+					<h3>￥101.10</h3>
+					<p><a href="./anli/zhongai">高性能MySQL(第3版)</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/40mysql.jpg" alt="">
+					<h3>￥101.10</h3>
+					<p><a href="./anli/zhongai">高性能MySQL(第3版)</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/40mysql.jpg" alt="">
+					<h3>￥101.10</h3>
+					<p><a href="./anli/zhongai">高性能MySQL(第3版)</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/50linux.jpg" alt="">
+					<h3>￥86.10</h3>
+					<p><a href="./anli/zhongai">Linux命令行与shell脚本编程大全</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/50linux.jpg" alt="">
+					<h3>￥86.10</h3>
+					<p><a href="./anli/zhongai">Linux命令行与shell脚本编程大全</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/50linux.jpg" alt="">
+					<h3>￥86.10</h3>
+					<p><a href="./anli/zhongai">Linux命令行与shell脚本编程大全</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/50linux.jpg" alt="">
+					<h3>￥86.10</h3>
+					<p><a href="./anli/zhongai">Linux命令行与shell脚本编程大全</a></p>
+				</li>
+			</ul>
+		</div>
+
+		<div class="louceng">	
+			<ul>
+				<li>
+					<img src="./img/shuji/5zhinan.jpg" alt="">
+					<h3>￥114.70</h3>
+					<p><a href="./anli/zhongai">JavaScript权威指南（第6版）</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/5zhinan.jpg" alt="">
+					<h3>￥114.70</h3>
+					<p><a href="./anli/zhongai">JavaScript权威指南（第6版）</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/5zhinan.jpg" alt="">
+					<h3>￥114.70</h3>
+					<p><a href="./anli/zhongai">JavaScript权威指南（第6版）</a></p>
+				</li>
+				<li>
+					<img src="./img/shuji/5zhinan.jpg" alt="">
+					<h3>￥114.70</h3>
+					<p><a href="./anli/zhongai">JavaScript权威指南（第6版）</a></p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		// $(":input").each(function(){
+		// 	alert( $(this).attr( "id" ) );
+		// });
+
+		// $(":text").css( "border", "1px solid red" );
+		// $(":password").css( "border", "1px solid red" );
+
+		// $(":radio").each(function(){
+		// 	alert( $(this).attr( "name" ) );
+		// });
+
+		// $(":checkbox").each(function(){
+		// 	alert( $(this).attr( "name" ) );
+		// });
+
+		// $(":submit").each(function(){
+		// 	alert( $(this).attr( "name" ) );
+		// });
+
+		// $(":image").each(function(){
+		// 	alert( $(this).attr( "name" ) );
+		// });
+
+
+		// $(":reset").each(function(){
+		// 	alert( $(this).attr( "name" ) );
+		// });
+
+		// $(":button").each(function(){
+		// 	alert( $(this).attr( "id" ) );
+		// });
+
+		$(":file").each(function(){
+			alert( $(this).attr( "id" ) );
+		});
+
+	});	
+	</script>
+</head>
+<body>
+	<form action="" id="userForm">
+		<p>
+			用户名: <input type="text" name="userName" id="userName">
+		</p>	
+		<p>
+			密码: <input type="password" name="userPwd" id="userPwd">
+		</p>	
+		<p>
+			邮箱: <input type="text" name="userEmail" id="userEmail">
+		</p>	
+		<p>
+			性别: <br>
+			<input type="radio" name="sex" id="">男
+			<input type="radio" name="sex" id="">女
+		</p>
+		<p>
+			爱好: <br>
+			<input type="checkbox" name="hobby">篮球
+			<input type="checkbox" name="hobby">足球
+			<input type="checkbox" name="hobby">羽毛球
+		</p>
+		<p>
+			简介:<br/>
+				<textarea name="intro" id="intro" cols="30" rows="10">我是一个IT男.....</textarea>
+		</p>
+		<p>
+			来自哪里: <br>
+			<select name="province" id="province">
+				<option value="江西省">江西省</option>
+				<option value="广东省">广东省</option>
+				<option value="广西省">广西省</option>
+			</select>	
+		</p>
+		<p>
+			<input type="button" value="按钮" id="btn">
+			<button name="btn2" id="btn2">按钮</button>
+		</p>
+		<p>
+			上传你的靓照: <br>
+			<input type="file" name="photo" id="photo">
+		</p>
+		<p>
+			<input type="image" name="img" value="图片域" src="" alt="">
+		</p>
+		<p>
+			<input type="submit" value="注册" name="reg">
+			<input type="submit" value="登陆" name="login">
+			<input type="reset" value="重置" name="reset">
+		</p>
+	</form>	
+</body>
+</html>

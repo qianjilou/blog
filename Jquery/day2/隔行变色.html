@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	div {
+		height: 20px;
+		border: 1px solid #000;
+		margin: 20px;
+	}	
+	.even {
+		background: #ccc;
+	}
+	.odd {
+		background: #eee;
+	}
+	.active {
+		background: red;
+	}
+	</style>
+	<script src="../jquery/jquery.min.js"></script>
+	<script>
+	$(function(){
+		$("div:even").addClass( "even" );
+		$("div:odd").addClass( "odd" );
+		$("div").hover(function(){
+			$(this).addClass( "active" );
+		}, function(){
+			$(this).removeClass( "active" );
+		});
+	});
+	</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>
