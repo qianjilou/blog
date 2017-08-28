@@ -1,4 +1,4 @@
-##  初见秦
+##  初见秦([返回](https://github.com/qianjilou/blog/tree/master/book/hanfeizi))
 ```diff
 作者：韩非
 ```
